@@ -4,6 +4,7 @@
  */
 package lab8p2_marioocampo;
 
+import static java.lang.Double.max;
 import static java.lang.Thread.sleep;
 import java.util.ArrayList;
 import java.util.logging.Level;
@@ -29,13 +30,15 @@ public class inicio extends javax.swing.JFrame {
 
     class pg extends Thread {
 
-        JProgressBar bar;
+        JProgressBar carga;
         JDialog menu;
 
-        pg(JProgressBar bar, JDialog inicioDialog) {
-            this.bar = bar;
-            this.menu = inicioDialog;
+        public pg(JProgressBar carga, JDialog menu) {
+            this.carga = carga;
+            this.menu = menu;
         }
+        
+        
 
         @Override
         public void run() {
@@ -55,8 +58,8 @@ public class inicio extends javax.swing.JFrame {
                     JOptionPane.showInputDialog("Error");
                 }
             }
-            if (bar.getValue() == max - 1) {
-
+            if (carga.getValue() == max) {
+                
             }
 
         }
@@ -73,6 +76,12 @@ public class inicio extends javax.swing.JFrame {
     private void initComponents() {
 
         menu = new javax.swing.JDialog();
+        jButton3 = new javax.swing.JButton();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel8 = new javax.swing.JLabel();
+        jButton4 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
@@ -89,16 +98,33 @@ public class inicio extends javax.swing.JFrame {
         busqcontra = new javax.swing.JTextField();
         jButton2 = new javax.swing.JButton();
 
-        javax.swing.GroupLayout menuLayout = new javax.swing.GroupLayout(menu.getContentPane());
-        menu.getContentPane().setLayout(menuLayout);
-        menuLayout.setHorizontalGroup(
-            menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        menuLayout.setVerticalGroup(
-            menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
+        menu.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jButton3.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jButton3.setText("Garaje");
+        menu.getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 120, -1, -1));
+
+        jPanel2.setBackground(new java.awt.Color(51, 153, 255));
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel8.setText("Menu");
+        jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 20, -1, -1));
+
+        menu.getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 630, 90));
+
+        jButton4.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jButton4.setText("Concesionaria");
+        menu.getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 200, -1, -1));
+
+        jButton5.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jButton5.setText("Vender Carros");
+        menu.getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 270, -1, -1));
+
+        jButton6.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jButton6.setText("Carrera");
+        menu.getContentPane().add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 350, -1, -1));
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -173,14 +199,20 @@ public class inicio extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1MouseClicked
 
     private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
-        for (Usuarios x : jugador) {
-            if (busqusuario.getText().equals(x.getUsuario()) && busqcontra.getText().equals(x.getPassword())) {
-                t1 = new pg(carga, menu);
-                t1.start();
+        t1 = new pg(carga, menu);
+        t1.start();
 
-            }else{
-                JOptionPane.showInputDialog("Este Usuario no existe");
+        if (carga.getValue() == 9) {
+            for (Usuarios x : jugador) {
+                if (busqusuario.getText().equals(x.getUsuario()) && busqcontra.getText().equals(x.getPassword())) {
+                    menu.setVisible(true);
+                    menu.pack();
+                    menu.setLocationRelativeTo(this);
+                } else {
+                    JOptionPane.showInputDialog("Este Usuario no existe");
+                }
             }
+
         }
 
 
@@ -228,6 +260,10 @@ public class inicio extends javax.swing.JFrame {
     private javax.swing.JTextField contra;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -235,7 +271,9 @@ public class inicio extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JDialog menu;
     private javax.swing.JTextField usuario;
     // End of variables declaration//GEN-END:variables

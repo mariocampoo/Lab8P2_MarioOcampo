@@ -197,10 +197,11 @@ public class inicio extends javax.swing.JFrame {
         }
 
     }
-    
-       class P1 extends Thread {
-           Random random = new Random();
-           int r = random.nextInt(601)+400;
+
+    class P1 extends Thread {
+
+        Random random = new Random();
+        int r = random.nextInt(601) + 400;
 
         JProgressBar C1;
         JDialog Carrera;
@@ -209,8 +210,6 @@ public class inicio extends javax.swing.JFrame {
             this.C1 = C1;
             this.Carrera = Carrera;
         }
-
-        
 
         @Override
         public void run() {
@@ -238,10 +237,11 @@ public class inicio extends javax.swing.JFrame {
         }
 
     }
-       
-       class P2 extends Thread {
-           Random random = new Random();
-           int r = random.nextInt(601)+400;
+
+    class P2 extends Thread {
+
+        Random random = new Random();
+        int r = random.nextInt(601) + 400;
 
         JProgressBar C2;
         JDialog Carrera;
@@ -250,8 +250,6 @@ public class inicio extends javax.swing.JFrame {
             this.C2 = C2;
             this.Carrera = Carrera;
         }
-
-        
 
         @Override
         public void run() {
@@ -279,10 +277,11 @@ public class inicio extends javax.swing.JFrame {
         }
 
     }
-       
-       class P3 extends Thread {
-           Random random = new Random();
-           int r = random.nextInt(601)+400;
+
+    class P3 extends Thread {
+
+        Random random = new Random();
+        int r = random.nextInt(601) + 400;
 
         JProgressBar C3;
         JDialog Carrera;
@@ -291,8 +290,6 @@ public class inicio extends javax.swing.JFrame {
             this.C3 = C3;
             this.Carrera = Carrera;
         }
-
-        
 
         @Override
         public void run() {
@@ -320,10 +317,11 @@ public class inicio extends javax.swing.JFrame {
         }
 
     }
-       
-       class P4 extends Thread {
-           Random random = new Random();
-           int r = random.nextInt(601)+400;
+
+    class P4 extends Thread {
+
+        Random random = new Random();
+        int r = random.nextInt(601) + 400;
 
         JProgressBar C4;
         JDialog Carrera;
@@ -332,8 +330,6 @@ public class inicio extends javax.swing.JFrame {
             this.C4 = C4;
             this.Carrera = Carrera;
         }
-
-        
 
         @Override
         public void run() {
@@ -641,12 +637,16 @@ public class inicio extends javax.swing.JFrame {
         jLabel18.setText("Meta");
         Carrera.getContentPane().add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 210, -1, -1));
 
+        CB1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Supra", "Civic", "Lancer", "GTR", "La Ferrari", "Huracan", "Mustang", "Camaro", "NSX", "M3", "R8", "911 Carrera" }));
         Carrera.getContentPane().add(CB1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, -1, -1));
 
+        CB2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Supra", "Civic", "Lancer", "GTR", "La Ferrari", "Huracan", "Mustang", "Camaro", "NSX", "M3", "R8", "911 Carrera" }));
         Carrera.getContentPane().add(CB2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, -1, -1));
 
+        CB3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Supra", "Civic", "Lancer", "GTR", "La Ferrari", "Huracan", "Mustang", "Camaro", "NSX", "M3", "R8", "911 Carrera" }));
         Carrera.getContentPane().add(CB3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 240, -1, -1));
 
+        CB4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Supra", "Civic", "Lancer", "GTR", "La Ferrari", "Huracan", "Mustang", "Camaro", "NSX", "M3", "R8", "911 Carrera" }));
         Carrera.getContentPane().add(CB4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 300, -1, -1));
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -818,16 +818,60 @@ public class inicio extends javax.swing.JFrame {
     private void jButton13MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton13MouseClicked
         P1 t4 = new P1(C1, Carrera);
         t4.start();
-        
+
         P2 t5 = new P2(C2, Carrera);
         t5.start();
-        
+
         P3 t6 = new P3(C3, Carrera);
         t6.start();
-        
+
         P4 t7 = new P4(C4, Carrera);
         t7.start();
+
         
+
+        if (C1.getValue() > C2.getValue()) {
+            JOptionPane.showMessageDialog(null, "La primera posicion Gano!!!");
+        }
+
+        if (C1.getValue() > C3.getValue()) {
+            JOptionPane.showMessageDialog(null, "La primera posicion Gano!!!");
+        }
+
+        if (C1.getValue() > C4.getValue()) {
+            JOptionPane.showMessageDialog(null, "La primera posicion Gano!!!");
+        }
+
+        if (C2.getValue() > C1.getValue()) {
+            JOptionPane.showMessageDialog(null, "La primera posicion Gano!!!");
+        }
+        if (C2.getValue() > C3.getValue()) {
+            JOptionPane.showMessageDialog(null, "La primera posicion Gano!!!");
+        }
+        if (C2.getValue() > C4.getValue()) {
+            JOptionPane.showMessageDialog(null, "La primera posicion Gano!!!");
+        }
+        if (C3.getValue() > C1.getValue()) {
+            JOptionPane.showMessageDialog(null, "La primera posicion Gano!!!");
+        }
+        if (C3.getValue() > C2.getValue()) {
+            JOptionPane.showMessageDialog(null, "La primera posicion Gano!!!");
+        }
+        if (C3.getValue() > C4.getValue()) {
+            JOptionPane.showMessageDialog(null, "La primera posicion Gano!!!");
+        }
+        if (C3.getValue() > C4.getValue()) {
+            JOptionPane.showMessageDialog(null, "La primera posicion Gano!!!");
+        }
+        if (C4.getValue() > C1.getValue()) {
+            JOptionPane.showMessageDialog(null, "La primera posicion Gano!!!");
+        }
+        if (C4.getValue() > C2.getValue()) {
+            JOptionPane.showMessageDialog(null, "La primera posicion Gano!!!");
+        }
+        if (C4.getValue() > C3.getValue()) {
+            JOptionPane.showMessageDialog(null, "La primera posicion Gano!!!");
+        }
     }//GEN-LAST:event_jButton13MouseClicked
 
     /**

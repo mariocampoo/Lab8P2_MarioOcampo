@@ -518,7 +518,20 @@
         <Component class="javax.swing.JComboBox" name="CB1">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="0"/>
+              <StringArray count="12">
+                <StringItem index="0" value="Supra"/>
+                <StringItem index="1" value="Civic"/>
+                <StringItem index="2" value="Lancer"/>
+                <StringItem index="3" value="GTR"/>
+                <StringItem index="4" value="La Ferrari"/>
+                <StringItem index="5" value="Huracan"/>
+                <StringItem index="6" value="Mustang"/>
+                <StringItem index="7" value="Camaro"/>
+                <StringItem index="8" value="NSX"/>
+                <StringItem index="9" value="M3"/>
+                <StringItem index="10" value="R8"/>
+                <StringItem index="11" value="911 Carrera"/>
+              </StringArray>
             </Property>
           </Properties>
           <AuxValues>
@@ -533,7 +546,20 @@
         <Component class="javax.swing.JComboBox" name="CB2">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="0"/>
+              <StringArray count="12">
+                <StringItem index="0" value="Supra"/>
+                <StringItem index="1" value="Civic"/>
+                <StringItem index="2" value="Lancer"/>
+                <StringItem index="3" value="GTR"/>
+                <StringItem index="4" value="La Ferrari"/>
+                <StringItem index="5" value="Huracan"/>
+                <StringItem index="6" value="Mustang"/>
+                <StringItem index="7" value="Camaro"/>
+                <StringItem index="8" value="NSX"/>
+                <StringItem index="9" value="M3"/>
+                <StringItem index="10" value="R8"/>
+                <StringItem index="11" value="911 Carrera"/>
+              </StringArray>
             </Property>
           </Properties>
           <AuxValues>
@@ -548,7 +574,20 @@
         <Component class="javax.swing.JComboBox" name="CB3">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="0"/>
+              <StringArray count="12">
+                <StringItem index="0" value="Supra"/>
+                <StringItem index="1" value="Civic"/>
+                <StringItem index="2" value="Lancer"/>
+                <StringItem index="3" value="GTR"/>
+                <StringItem index="4" value="La Ferrari"/>
+                <StringItem index="5" value="Huracan"/>
+                <StringItem index="6" value="Mustang"/>
+                <StringItem index="7" value="Camaro"/>
+                <StringItem index="8" value="NSX"/>
+                <StringItem index="9" value="M3"/>
+                <StringItem index="10" value="R8"/>
+                <StringItem index="11" value="911 Carrera"/>
+              </StringArray>
             </Property>
           </Properties>
           <AuxValues>
@@ -563,7 +602,20 @@
         <Component class="javax.swing.JComboBox" name="CB4">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="0"/>
+              <StringArray count="12">
+                <StringItem index="0" value="Supra"/>
+                <StringItem index="1" value="Civic"/>
+                <StringItem index="2" value="Lancer"/>
+                <StringItem index="3" value="GTR"/>
+                <StringItem index="4" value="La Ferrari"/>
+                <StringItem index="5" value="Huracan"/>
+                <StringItem index="6" value="Mustang"/>
+                <StringItem index="7" value="Camaro"/>
+                <StringItem index="8" value="NSX"/>
+                <StringItem index="9" value="M3"/>
+                <StringItem index="10" value="R8"/>
+                <StringItem index="11" value="911 Carrera"/>
+              </StringArray>
             </Property>
           </Properties>
           <AuxValues>

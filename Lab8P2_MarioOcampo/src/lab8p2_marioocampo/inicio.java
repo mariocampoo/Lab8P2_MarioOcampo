@@ -4,9 +4,11 @@
  */
 package lab8p2_marioocampo;
 
+import java.awt.PopupMenu;
 import static java.lang.Double.max;
 import static java.lang.Thread.sleep;
 import java.util.ArrayList;
+import java.util.Random;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JDialog;
@@ -25,10 +27,9 @@ public class inicio extends javax.swing.JFrame {
     DefaultTableModel tabla = new DefaultTableModel();
 
     pg t1;
-    
-    
+
     int max = 0;
-    int maximo =0;
+    int maximo = 0;
 
     /**
      * Creates new form inicio
@@ -107,36 +108,21 @@ public class inicio extends javax.swing.JFrame {
                     }
                 }
             }
-            
-            
-            
-            
-            
 
         }
 
     }
-    
-    public void barra(){
-        Thread t =new Thread(){
-          public void run(){
-              
-              
-              
-             
-              
-              
-              
-              
-          }  
-            
-            
+
+    public void barra() {
+        Thread t = new Thread() {
+            public void run() {
+
+            }
+
         };
-        
-        
-        
+
     }
-       
+
     class PG1 extends Thread {
 
         JProgressBar cargaCarro;
@@ -146,8 +132,7 @@ public class inicio extends javax.swing.JFrame {
             this.cargaCarro = cargaCarro;
             this.Concesionaria = Concesionaria;
         }
-        
-        
+
         @Override
         public void run() {
             int minimo = 0;
@@ -169,13 +154,13 @@ public class inicio extends javax.swing.JFrame {
             System.out.println(cargaCarro.getValue());
             if (cargaCarro.getValue() == maximo - 1) {
                 agregar();
-                
+
             }
 
         }
 
     }
-    
+
     class PG2 extends Thread {
 
         JProgressBar pggaraje;
@@ -186,9 +171,6 @@ public class inicio extends javax.swing.JFrame {
             this.garaje = garaje;
         }
 
-        
-        
-        
         @Override
         public void run() {
             int minimo = 0;
@@ -209,16 +191,176 @@ public class inicio extends javax.swing.JFrame {
             }
             System.out.println(pggaraje.getValue());
             if (pggaraje.getValue() == maximo - 1) {
-                
-                
+
             }
 
         }
 
     }
     
+       class P1 extends Thread {
+           Random random = new Random();
+           int r = random.nextInt(601)+400;
+
+        JProgressBar C1;
+        JDialog Carrera;
+
+        public P1(JProgressBar C1, JDialog Carrera) {
+            this.C1 = C1;
+            this.Carrera = Carrera;
+        }
 
         
+
+        @Override
+        public void run() {
+            int minimo = 0;
+            int maximo = 10;
+
+            C1.setMaximum(minimo);
+            C1.setMaximum(maximo - 1);
+            C1.setValue(0);
+
+            for (int i = minimo; i < maximo; i++) {
+                C1.setValue(i);
+
+                try {
+                    sleep(r);
+                } catch (InterruptedException ex) {
+                    JOptionPane.showInputDialog("Error");
+                }
+            }
+            System.out.println(C1.getValue());
+            if (C1.getValue() == maximo - 1) {
+
+            }
+
+        }
+
+    }
+       
+       class P2 extends Thread {
+           Random random = new Random();
+           int r = random.nextInt(601)+400;
+
+        JProgressBar C2;
+        JDialog Carrera;
+
+        public P2(JProgressBar C2, JDialog Carrera) {
+            this.C2 = C2;
+            this.Carrera = Carrera;
+        }
+
+        
+
+        @Override
+        public void run() {
+            int minimo = 0;
+            int maximo = 10;
+
+            C2.setMaximum(minimo);
+            C2.setMaximum(maximo - 1);
+            C2.setValue(0);
+
+            for (int i = minimo; i < maximo; i++) {
+                C2.setValue(i);
+
+                try {
+                    sleep(r);
+                } catch (InterruptedException ex) {
+                    JOptionPane.showInputDialog("Error");
+                }
+            }
+            System.out.println(C2.getValue());
+            if (C2.getValue() == maximo - 1) {
+
+            }
+
+        }
+
+    }
+       
+       class P3 extends Thread {
+           Random random = new Random();
+           int r = random.nextInt(601)+400;
+
+        JProgressBar C3;
+        JDialog Carrera;
+
+        public P3(JProgressBar C3, JDialog Carrera) {
+            this.C3 = C3;
+            this.Carrera = Carrera;
+        }
+
+        
+
+        @Override
+        public void run() {
+            int minimo = 0;
+            int maximo = 10;
+
+            C3.setMaximum(minimo);
+            C3.setMaximum(maximo - 1);
+            C3.setValue(0);
+
+            for (int i = minimo; i < maximo; i++) {
+                C3.setValue(i);
+
+                try {
+                    sleep(r);
+                } catch (InterruptedException ex) {
+                    JOptionPane.showInputDialog("Error");
+                }
+            }
+            System.out.println(C3.getValue());
+            if (C3.getValue() == maximo - 1) {
+
+            }
+
+        }
+
+    }
+       
+       class P4 extends Thread {
+           Random random = new Random();
+           int r = random.nextInt(601)+400;
+
+        JProgressBar C4;
+        JDialog Carrera;
+
+        public P4(JProgressBar C4, JDialog Carrera) {
+            this.C4 = C4;
+            this.Carrera = Carrera;
+        }
+
+        
+
+        @Override
+        public void run() {
+            int minimo = 0;
+            int maximo = 10;
+
+            C4.setMaximum(minimo);
+            C4.setMaximum(maximo - 1);
+            C4.setValue(0);
+
+            for (int i = minimo; i < maximo; i++) {
+                C4.setValue(i);
+
+                try {
+                    sleep(r);
+                } catch (InterruptedException ex) {
+                    JOptionPane.showInputDialog("Error");
+                }
+            }
+            System.out.println(C4.getValue());
+            if (C4.getValue() == maximo - 1) {
+
+            }
+
+        }
+
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -488,6 +630,11 @@ public class inicio extends javax.swing.JFrame {
         Carrera.getContentPane().add(C4, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 290, 470, 30));
 
         jButton13.setText("Iniciar");
+        jButton13.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton13MouseClicked(evt);
+            }
+        });
         Carrera.getContentPane().add(jButton13, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 360, -1, -1));
 
         jLabel18.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -580,7 +727,7 @@ public class inicio extends javax.swing.JFrame {
             System.out.println("haha");
         }
         t1.start();
-        
+
 
     }//GEN-LAST:event_jButton2MouseClicked
 
@@ -600,33 +747,34 @@ public class inicio extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton4MouseClicked
 
     private void jButton7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton7MouseClicked
-       PG1 t2 = new PG1(cargaCarro,Concesionaria);
-       t2.start();
-        
+        PG1 t2 = new PG1(cargaCarro, Concesionaria);
+        t2.start();
+
 
     }//GEN-LAST:event_jButton7MouseClicked
 
     private void jButton8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton8MouseClicked
-    
-    JOptionPane.showMessageDialog(null, "Compra exitosa");
-    
-        
-        
-        
-        
-        
-        
-        
-        
+
+        try {
+            Object car = tb1.getSelectedRow();
+            carros.add(car);
+            tb1.remove(tb1.getSelectedRow());
+            tb2.add((PopupMenu) car);
+
+            JOptionPane.showMessageDialog(null, "Compra exitosa");
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Ocurrio un error");
+        }
+
+
     }//GEN-LAST:event_jButton8MouseClicked
 
-    public void añadir(){
+    public void añadir() {
         int row = tb1.getSelectedRow();
-        
-        
+
     }
-    
-    
+
+
     private void jButton9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton9MouseClicked
         menu.setVisible(true);
         menu.pack();
@@ -635,8 +783,8 @@ public class inicio extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton9MouseClicked
 
     private void jButton10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton10MouseClicked
-        PG2 t3 = new PG2(pggaraje,garaje);
-       t3.start();
+        PG2 t3 = new PG2(pggaraje, garaje);
+        t3.start();
     }//GEN-LAST:event_jButton10MouseClicked
 
     private void jButton11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton11MouseClicked
@@ -666,6 +814,21 @@ public class inicio extends javax.swing.JFrame {
         Carrera.setLocationRelativeTo(this);
         menu.setVisible(false);
     }//GEN-LAST:event_jButton6MouseClicked
+
+    private void jButton13MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton13MouseClicked
+        P1 t4 = new P1(C1, Carrera);
+        t4.start();
+        
+        P2 t5 = new P2(C2, Carrera);
+        t5.start();
+        
+        P3 t6 = new P3(C3, Carrera);
+        t6.start();
+        
+        P4 t7 = new P4(C4, Carrera);
+        t7.start();
+        
+    }//GEN-LAST:event_jButton13MouseClicked
 
     /**
      * @param args the command line arguments
@@ -768,6 +931,6 @@ public class inicio extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 
     ArrayList<Usuarios> jugador = new ArrayList();
-    ArrayList<Carro> carros = new ArrayList();
+    ArrayList<Object> carros = new ArrayList();
 
 }

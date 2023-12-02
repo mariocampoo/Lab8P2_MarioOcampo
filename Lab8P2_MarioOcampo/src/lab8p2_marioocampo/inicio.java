@@ -14,6 +14,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JProgressBar;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableModel;
 
 /**
  *
@@ -262,6 +263,19 @@ public class inicio extends javax.swing.JFrame {
         tb3 = new javax.swing.JTable();
         jLabel15 = new javax.swing.JLabel();
         jButton12 = new javax.swing.JButton();
+        Carrera = new javax.swing.JDialog();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        C1 = new javax.swing.JProgressBar();
+        C2 = new javax.swing.JProgressBar();
+        C3 = new javax.swing.JProgressBar();
+        C4 = new javax.swing.JProgressBar();
+        jButton13 = new javax.swing.JButton();
+        jLabel18 = new javax.swing.JLabel();
+        CB1 = new javax.swing.JComboBox<>();
+        CB2 = new javax.swing.JComboBox<>();
+        CB3 = new javax.swing.JComboBox<>();
+        CB4 = new javax.swing.JComboBox<>();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
@@ -319,6 +333,11 @@ public class inicio extends javax.swing.JFrame {
 
         jButton6.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jButton6.setText("Carrera");
+        jButton6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton6MouseClicked(evt);
+            }
+        });
         menu.getContentPane().add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 350, -1, -1));
         menu.getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 420, 10, 20));
 
@@ -457,6 +476,32 @@ public class inicio extends javax.swing.JFrame {
         });
         Vender.getContentPane().add(jButton12, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 400, -1, -1));
 
+        Carrera.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        Carrera.getContentPane().add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(686, 417, -1, -1));
+
+        jLabel17.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        jLabel17.setText("Carrera");
+        Carrera.getContentPane().add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 10, -1, -1));
+        Carrera.getContentPane().add(C1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 110, 470, 30));
+        Carrera.getContentPane().add(C2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 170, 470, 30));
+        Carrera.getContentPane().add(C3, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 230, 470, 30));
+        Carrera.getContentPane().add(C4, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 290, 470, 30));
+
+        jButton13.setText("Iniciar");
+        Carrera.getContentPane().add(jButton13, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 360, -1, -1));
+
+        jLabel18.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel18.setText("Meta");
+        Carrera.getContentPane().add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 210, -1, -1));
+
+        Carrera.getContentPane().add(CB1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, -1, -1));
+
+        Carrera.getContentPane().add(CB2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, -1, -1));
+
+        Carrera.getContentPane().add(CB3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 240, -1, -1));
+
+        Carrera.getContentPane().add(CB4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 300, -1, -1));
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -563,6 +608,9 @@ public class inicio extends javax.swing.JFrame {
 
     private void jButton8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton8MouseClicked
     
+    JOptionPane.showMessageDialog(null, "Compra exitosa");
+    
+        
         
         
         
@@ -572,6 +620,13 @@ public class inicio extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jButton8MouseClicked
 
+    public void añadir(){
+        int row = tb1.getSelectedRow();
+        
+        
+    }
+    
+    
     private void jButton9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton9MouseClicked
         menu.setVisible(true);
         menu.pack();
@@ -604,6 +659,13 @@ public class inicio extends javax.swing.JFrame {
         menu.setLocationRelativeTo(this);
         Vender.setVisible(false);
     }//GEN-LAST:event_jButton12MouseClicked
+
+    private void jButton6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton6MouseClicked
+        Carrera.setVisible(true);
+        Carrera.pack();
+        Carrera.setLocationRelativeTo(this);
+        menu.setVisible(false);
+    }//GEN-LAST:event_jButton6MouseClicked
 
     /**
      * @param args the command line arguments
@@ -641,6 +703,15 @@ public class inicio extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JProgressBar C1;
+    private javax.swing.JProgressBar C2;
+    private javax.swing.JProgressBar C3;
+    private javax.swing.JProgressBar C4;
+    private javax.swing.JComboBox<String> CB1;
+    private javax.swing.JComboBox<String> CB2;
+    private javax.swing.JComboBox<String> CB3;
+    private javax.swing.JComboBox<String> CB4;
+    private javax.swing.JDialog Carrera;
     private javax.swing.JDialog Concesionaria;
     private javax.swing.JDialog Vender;
     private javax.swing.JTextField busqcontra;
@@ -653,6 +724,7 @@ public class inicio extends javax.swing.JFrame {
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton12;
+    private javax.swing.JButton jButton13;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
@@ -668,6 +740,9 @@ public class inicio extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

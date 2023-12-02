@@ -38,6 +38,8 @@ public class inicio extends javax.swing.JFrame {
         String[] titulos = new String[]{"Tipo", "Marca", "Precio", "Tiempo"};
         tabla.setColumnIdentifiers(titulos);
         tb1.setModel(tabla);
+        tb2.setModel(tabla);
+        tb3.setModel(tabla);
     }
 
     void agregar() {
@@ -206,7 +208,7 @@ public class inicio extends javax.swing.JFrame {
             }
             System.out.println(pggaraje.getValue());
             if (pggaraje.getValue() == maximo - 1) {
-                agregar();
+                
                 
             }
 
@@ -239,9 +241,10 @@ public class inicio extends javax.swing.JFrame {
         jLabel11 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tb2 = new javax.swing.JTable();
         pggaraje = new javax.swing.JProgressBar();
         jButton10 = new javax.swing.JButton();
+        jButton11 = new javax.swing.JButton();
         Concesionaria = new javax.swing.JDialog();
         jPanel4 = new javax.swing.JPanel();
         jLabel12 = new javax.swing.JLabel();
@@ -252,6 +255,13 @@ public class inicio extends javax.swing.JFrame {
         jButton8 = new javax.swing.JButton();
         cargaCarro = new javax.swing.JProgressBar();
         jButton9 = new javax.swing.JButton();
+        Vender = new javax.swing.JDialog();
+        jPanel5 = new javax.swing.JPanel();
+        jLabel14 = new javax.swing.JLabel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        tb3 = new javax.swing.JTable();
+        jLabel15 = new javax.swing.JLabel();
+        jButton12 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
@@ -300,6 +310,11 @@ public class inicio extends javax.swing.JFrame {
 
         jButton5.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jButton5.setText("Vender Carros");
+        jButton5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton5MouseClicked(evt);
+            }
+        });
         menu.getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 280, -1, -1));
 
         jButton6.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
@@ -320,7 +335,7 @@ public class inicio extends javax.swing.JFrame {
         garaje.getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 670, 110));
         garaje.getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 440, 20, 20));
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tb2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -331,7 +346,7 @@ public class inicio extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(tb2);
 
         garaje.getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 190, 360, 160));
         garaje.getContentPane().add(pggaraje, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 150, 370, 10));
@@ -343,6 +358,14 @@ public class inicio extends javax.swing.JFrame {
             }
         });
         garaje.getContentPane().add(jButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 370, -1, -1));
+
+        jButton11.setText("Regresar");
+        jButton11.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton11MouseClicked(evt);
+            }
+        });
+        garaje.getContentPane().add(jButton11, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 410, -1, -1));
 
         Concesionaria.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -397,6 +420,42 @@ public class inicio extends javax.swing.JFrame {
             }
         });
         Concesionaria.getContentPane().add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 420, -1, -1));
+
+        Vender.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel5.setBackground(new java.awt.Color(0, 204, 255));
+        jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel14.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel14.setText("Vender");
+        jPanel5.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 20, -1, -1));
+
+        Vender.getContentPane().add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 90));
+
+        tb3.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane3.setViewportView(tb3);
+
+        Vender.getContentPane().add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 120, 450, 190));
+        Vender.getContentPane().add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 410, 10, 40));
+
+        jButton12.setText("Regresar");
+        jButton12.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton12MouseClicked(evt);
+            }
+        });
+        Vender.getContentPane().add(jButton12, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 400, -1, -1));
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -503,6 +562,13 @@ public class inicio extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton7MouseClicked
 
     private void jButton8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton8MouseClicked
+    
+        
+        
+        
+        
+        
+        
         
     }//GEN-LAST:event_jButton8MouseClicked
 
@@ -517,6 +583,27 @@ public class inicio extends javax.swing.JFrame {
         PG2 t3 = new PG2(pggaraje,garaje);
        t3.start();
     }//GEN-LAST:event_jButton10MouseClicked
+
+    private void jButton11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton11MouseClicked
+        menu.setVisible(true);
+        menu.pack();
+        menu.setLocationRelativeTo(this);
+        garaje.setVisible(false);
+    }//GEN-LAST:event_jButton11MouseClicked
+
+    private void jButton5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5MouseClicked
+        Vender.setVisible(true);
+        Vender.pack();
+        Vender.setLocationRelativeTo(this);
+        menu.setVisible(false);
+    }//GEN-LAST:event_jButton5MouseClicked
+
+    private void jButton12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton12MouseClicked
+        menu.setVisible(true);
+        menu.pack();
+        menu.setLocationRelativeTo(this);
+        Vender.setVisible(false);
+    }//GEN-LAST:event_jButton12MouseClicked
 
     /**
      * @param args the command line arguments
@@ -555,6 +642,7 @@ public class inicio extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JDialog Concesionaria;
+    private javax.swing.JDialog Vender;
     private javax.swing.JTextField busqcontra;
     private javax.swing.JTextField busqusuario;
     private javax.swing.JProgressBar carga;
@@ -563,6 +651,8 @@ public class inicio extends javax.swing.JFrame {
     private javax.swing.JDialog garaje;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
+    private javax.swing.JButton jButton11;
+    private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
@@ -576,6 +666,8 @@ public class inicio extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -588,12 +680,15 @@ public class inicio extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTable jTable1;
+    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JDialog menu;
     private javax.swing.JProgressBar pggaraje;
     private javax.swing.JTable tb1;
+    private javax.swing.JTable tb2;
+    private javax.swing.JTable tb3;
     private javax.swing.JTextField usuario;
     // End of variables declaration//GEN-END:variables
 

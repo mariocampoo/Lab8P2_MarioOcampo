@@ -1,19 +1,23 @@
 package lab8p2_marioocampo;
+
 public class Carro {
-     private String marca;
-    private String modelo;
-    private String color;
+
+    private String tipo;
+    private String marca;
     private int precio;
-    
-    private boolean reconstruido;
-    
-    public Carro(String marca, String modelo, String color, int precio){
+
+    public Carro(String tipo, String marca, int precio) {
+        this.tipo = tipo;
         this.marca = marca;
-        this.modelo = modelo;
         this.precio = precio;
-        this.color = color;
-        this.reconstruido = reconstruido;
-        
+    }
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
     }
 
     public String getMarca() {
@@ -24,23 +28,7 @@ public class Carro {
         this.marca = marca;
     }
 
-    public String getModelo() {
-        return modelo;
-    }
-
-    public void setModelo(String modelo) {
-        this.modelo = modelo;
-    }
-
-    public String getColor() {
-        return color;
-    }
-
-    public void setColor(String color) {
-        this.color = color;
-    }
-
-    public double getPrecio() {
+    public int getPrecio() {
         return precio;
     }
 
@@ -48,23 +36,14 @@ public class Carro {
         this.precio = precio;
     }
 
-    public boolean isReconstruido() {
-        return reconstruido;
-    }
-
-    public void setReconstruido(boolean reconstruido) {
-        this.reconstruido = reconstruido;
-    }
-
     @Override
     public String toString() {
-        return "Carro\n"
-                + ""+"Marca=" + marca + "\n"
-                + "Modelo = " + modelo + "\n"
-                + "Color = " + color + "\n"
-                + "Precio = " + precio + "\n"
-                + "Reconstruido = " + reconstruido;
+        return "Carro" + " \n"
+                + " Tipo = " + tipo + " \n"
+                + " Marca = " + marca + "\n "
+                + " Precio = " + precio;
     }
+    
     
     
 }

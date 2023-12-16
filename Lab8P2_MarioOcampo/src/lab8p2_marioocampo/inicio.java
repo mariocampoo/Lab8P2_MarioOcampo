@@ -190,9 +190,6 @@ public class inicio extends javax.swing.JFrame {
                 }
             }
             System.out.println(pggaraje.getValue());
-            if (pggaraje.getValue() == maximo - 1) {
-
-            }
 
         }
 
@@ -754,14 +751,20 @@ public class inicio extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton7MouseClicked
 
     private void jButton8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton8MouseClicked
-
         try {
-            Object car = tb1.getSelectedRow();
-            carros.add(car);
-            tb1.remove(tb1.getSelectedRow());
-            tb2.add((PopupMenu) car);
+            int obj = tb1.getSelectedRow();
+            if (tb1.getSelectedRow() != -1) {
+                DefaultTableModel model1 = (DefaultTableModel) tb1.getModel();
+                DefaultTableModel model2 = (DefaultTableModel) tb2.getModel();
+                Object[] rowData = new Object[model1.getColumnCount()];
+                for (int i = 0; i < model1.getColumnCount(); i++) {
+                    rowData[i] = model1.getValueAt(obj, i);
+                }
+                model1.removeRow(obj);
+                model2.addRow(rowData);
+                JOptionPane.showMessageDialog(null, "Compra exitosa");
+            }
 
-            JOptionPane.showMessageDialog(null, "Compra exitosa");
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Ocurrio un error");
         }
@@ -827,8 +830,6 @@ public class inicio extends javax.swing.JFrame {
 
         P4 t7 = new P4(C4, Carrera);
         t7.start();
-
-        
 
         if (C1.getValue() > C2.getValue()) {
             JOptionPane.showMessageDialog(null, "La primera posicion Gano!!!");
